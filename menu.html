@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Page</title>
+    <link rel="icon" href="https://marketplace.canva.com/EAFpeiTrl4c/1/0/1600w/canva-abstract-chef-cooking-restaurant-free-logo-9Gfim1S8fHg.jpg" type="image/png" sizes="16x16">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            text-align: center;
+            position: relative;
+        }
+
+        header {
+            background-color:GREEN;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        #logo {
+            max-width: 80px;
+            margin: 0 auto;
+        }
+
+        #header-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #header-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            cursor: pointer;
+            transition: color 0.3s;
+            margin: 0 15px;
+        }
+
+        #header-links a:hover {
+            color: #333;
+        }
+
+        #menu-section {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 80%;
+        }
+
+        .menu-category {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            margin: 10px;
+            width: 45%;
+            box-sizing: border-box;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .menu-item p {
+            background-color: #ffcc00;
+            color: #333;
+            padding: 10px;
+            margin: 0;
+            border-radius: 0 0 10px 10px;
+            font-weight: bold;
+        }
+            #back-btn-body {
+            background-color: #ff4500; /* Red-Orange */
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 5px;
+            transition: background-color 0.3s;
+        }
+        #back-btn-body:hover {
+            background-color: #cc3700; /* Darker Red-Orange on hover */
+        }
+
+        @media (max-width: 768px) {
+            #logo {
+                max-width: 60px;
+            }
+
+            header {
+                padding: 10px;
+            }
+
+            #header-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu-item {
+                width: 100%;
+            }
+        }
+        
+        footer {
+            background-color: #1e90ff; /* Dodger Blue */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div id="header-links">
+            <a href="#Home">
+                <img id="logo" src="https://marketplace.canva.com/EAFpeiTrl4c/1/0/1600w/canva-abstract-chef-cooking-restaurant-free-logo-9Gfim1S8fHg.jpg" alt="Logo">
+            </a>
+        </div>
+    </header>
+
+    <!-- Menu Section -->
+    <section id="menu-section">
+        <!-- Appetizers Section -->
+        <div class="menu-category">
+            <div class="menu-item" onclick="window.location.href='#appetizers'">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5GAJgChlh-1waEZbKwGWvHFr15iab2IWcYw&usqp=CAU" alt="Appetizer">
+                <p>Appetizer </p>
+            </div>
+            <!-- Repeat the structure for other appetizers -->
+            <!-- Add more items here -->
+        </div>
+        <!-- Appetizers Section End -->
+
+        <!-- Main Courses Section -->
+        <div class="menu-category">
+            <div class="menu-item" onclick="window.location.href='#maincourses'">
+                <img src="https://www.tasteofhome.com/wp-content/uploads/2021/01/Rogan-Josh-1190644860.jpg?fit=700%2C700" alt="Main Course ">
+                <p>Main Course </p>
+            </div>
+            <!-- Repeat the structure for other main courses -->
+            <!-- Add more items here -->
+        </div>
+        <!-- Main Courses Section End -->
+
+        <!-- Desserts Section -->
+        <div class="menu-category">
+            <div class="menu-item" onclick="window.location.href='#desserts'">
+                <img src="https://www.brit.co/media-library/20-easy-dessert-recipes.jpg?id=23305200&width=980" alt="Dessert ">
+                <p>Dessert </p>
+            </div>
+            <!-- Repeat the structure for other desserts -->
+            <!-- Add more items here -->
+        </div>
+        <!-- Desserts Section End -->
+
+        <!-- Beverages Section -->
+        <div class="menu-category">
+            <div class="menu-item" onclick="window.location.href='#beverages'">
+                <img src="https://www.tutorialspoint.com/food_and_beverage_services/images/non_alcoholic_beverages.jpg" alt="Beverage ">
+                <p>Beverage </p>
+            </div>
+            <!-- Repeat the structure for other beverages -->
+            <!-- Add more items here -->
+        </div>
+        <!-- Beverages Section End -->
+
+    </section>
+    <!-- Menu Section End -->
+
+    <button id="back-btn-body" onclick="goBack()">Back</button>
+ <footer>
+        <p id="friday-night">FridayNight</p>
+        <p>"Good food is good mood. Indulge in the finest flavors crafted just for you."</p>
+        <p>Opening Hours: Mon-Sun, 11:00 AM - 10:00 PM</p>
+        <p>Enquiries: <a href="tel:+1234567890">+123 456 7890</a> | <a href="mailto:info@FridayNight">info@FridayNight.com</a></p>
+        <p>Address: 123 Main Street, Cityville</p>
+    </footer>
+
+
+    <script>
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+    </script>
+
+</body>
+
+</html>

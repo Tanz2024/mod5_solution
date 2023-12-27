@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Interface</title>
+    <link rel="icon" href="https://marketplace.canva.com/EAFpeiTrl4c/1/0/1600w/canva-abstract-chef-cooking-restaurant-free-logo-9Gfim1S8fHg.jpg" type="image/png" sizes="16x16">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: GREEN; /* Brightly Orange */
+            color: white;
+            padding: 15px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 10px;
+        }
+
+        #logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #header-links {
+            display: flex;
+            align-items: center;
+        }
+
+        #header-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px; /* Increased font size */
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        #header-links a:hover,
+        #header-links a:focus {
+            color: #e8f9fd; /* Dimly Blue */
+        }
+
+       #header-links a:focus::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%; /* Adjusted width for better visibility */
+    border-bottom: 3px solid #e8f9fd; /* Dimly Blue */
+}
+
+        #header-links a span {
+            margin-top: 5px;
+            font-size: 20px; /* Increased font size */
+            font-family:!important;
+        }
+
+        #delivery-info {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #delivery-info p {
+            margin: 0;
+            font-size: 14px; /* Adjusted font size */
+        }
+
+        #delivery-period,
+        #estimate-time {
+            color: #e8f9fd; /* Dimly Blue */
+            margin-top: 5px;
+        }
+
+      #banner-image {
+    width: 100%;
+    max-width: 100%; /* Adjusted to take full width */
+    height: auto;   /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+        #menu-container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #menu-slider,
+        #rated-slider {
+            display: flex;
+            flex-direction: row; /* Updated to row for horizontal alignment */
+            align-items: center;
+            justify-content: space-between; /* Added space between items */
+        }
+
+        #menu,
+        #rated-item {
+            width: 48%; /* Adjusted width for two items in a row */
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 0 20px 0;
+        }
+
+        #menu img,
+        #rated-item img,
+        #banner-image img {
+            width: 100%;
+            max-width: 100%; /* Updated to take full width */
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px; /* Added margin */
+        }
+
+        #footer {
+            background-color: lightblue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #map-container {
+            width: 100%;
+            height: 200px;
+            margin-top: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Additional Styles for Images and Options */
+        #menu-options,
+        #rated-options {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+
+        #menu-options div,
+        #rated-options div {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Styles for Smaller Screens */
+        @media screen and (max-width: 768px) {
+            header {
+                padding: 10px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #logo {
+                width: 40px;
+                height: 40px;
+                margin-bottom: 10px;
+            }
+
+            #header-links {
+                align-items: flex-start;
+            }
+
+            #delivery-info {
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            #menu,
+            #rated-item {
+                width: 100%; /* Adjusted width for full width on smaller screens */
+                margin: 0;
+                margin-bottom: 10px;
+            }
+
+            #footer {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div id="header-links">
+            <div id="logo">
+                <img src="https://marketplace.canva.com/EAFpeiTrl4c/1/0/1600w/canva-abstract-chef-cooking-restaurant-free-logo-9Gfim1S8fHg.jpg" alt="Logo">
+            </div>
+            <div>
+                <a href="award.html">
+                    <span>🏆</span>
+                    <span>Award</span>
+                </a>
+                <a href="#menu">
+                    <span>🍽️</span>
+                    <span>Menu</span>
+                </a>
+                <a href="aboutus.html">
+                    <span>ℹ️</span>
+                    <span>About Us</span>
+                </a>
+                <a href="#contact-us" onclick="handleContact()">
+                    <span>📞</span>
+                    <span>Contact Us</span>
+                </a>
+            </div>
+        </div>
+        <div id="delivery-info">
+            <p id="delivery-period">Delivery Time: 6 AM - 12 AM</p>
+            <p id="estimate-time">Estimated Time: 30 mins</p>
+        </div>
+    </header>
+
+    <img src="https://www.foodandwine.com/thmb/BQa4GxC8HHLAKnSq-LXrjQZVFd0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/best-diners-bobs-big-boy-california-FT-BLOG0220-19c17b3c6f774bd7a012cccd4c1bf3d0.jpg" alt="Banner Image" id="banner-image">
+
+    <div id="menu-container">
+        <div id="menu-slider">
+            <div id="menu">
+                <h2>Menu</h2>
+                <a href="menu.html"><img src="https://www.manpuku-veggie.com/sites/default/files/styles/m_large/public/2020-06/10060-02.jpg?itok=M0CDvmuQ" alt="Menu Image"></a>
+                <div id="menu-options">
+                </div>
+            </div>
+            <div id="rated-item">
+                <h2>Rated Dish</h2>
+                <a href="rateditem.html"><img src="https://honest-food.net/wp-content/uploads/2012/03/andouille-sausage.jpg" alt="Rated Dish Image"></a>
+                <div id="rated-options">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div>
+            <p id="friday-night">FridayNight</p>
+            <p id="quote">"Good food is good mood. Indulge in the finest flavors crafted just for you."</p>
+            <p id="opening-hours">Opening Hours: Mon-Sun, 11:00 AM - 10:00 PM</p>
+            <p id="enquiries">Enquiries: <a href="tel:+1234567890">+123 456 7890</a> | <a href="mailto:info@fridaynight.com">info@fridaynight.com</a></p>
+            <p id="address">Address: 123 Main Street, Cityville</p>
+        </div>
+        <div id="map-container">
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96757.9308259147!2d-74.07159340261236!3d40.72494295272096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f62fec73a7%3A0x5e24118dffac8a65!2sPer%20Se!5e0!3m2!1sen!2smy!4v1703667211767!5m2!1sen!2smy" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+
+    <script>
+        function handleContact() {
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                window.location.href = 'https://wa.me/1234567890'; // Replace with your WhatsApp number
+            } else {
+                window.location.href = 'tel:+1234567890'; // Replace with your phone number
+            }
+        }
+    </script>
+</body>
+
+</html>

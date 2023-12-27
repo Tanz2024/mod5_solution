@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" href="https://marketplace.canva.com/EAFpeiTrl4c/1/0/1600w/canva-abstract-chef-cooking-restaurant-free-logo-9Gfim1S8fHg.jpg" type="image/png" sizes="16x16">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            text-align: center;
+            position: relative;
+        }
+
+        header {
+            background-color: #008000; /* Green */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        #menu-section {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 80%;
+        }
+
+        .menu-category {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            margin: 10px;
+            width: calc(33.33% - 20px);
+            box-sizing: border-box;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .menu-item p {
+            background-color: #ffd700; /* Gold */
+            color: #333;
+            padding: 10px;
+            margin: 0;
+            border-radius: 0 0 10px 10px;
+            font-weight: bold;
+        }
+
+        .comment-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Align items at the center */
+            margin-top: 10px;
+        }
+
+        .comment-btn,
+        .stars-btn {
+            background-color: purple;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .comment-btn:hover,
+        .stars-btn:hover {
+            background-color: #orange;
+        }
+
+          
+        footer {
+            background-color: #1e90ff; /* Dodger Blue */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .review {
+            color: black; /* Tomato */
+        }
+
+        .stars {
+            color: #FFD700; /* Gold */
+        }
+        #back-btn-body {
+            background-color: #ff4500; /* Red-Orange */
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 5px;
+            transition: background-color 0.3s;
+        }
+        #back-btn-body:hover {
+            background-color: #cc3700; /* Darker Red-Orange on hover */
+        }
+
+        /* Responsive Styles for Smaller Screens */
+        @media screen and (max-width: 768px) {
+            .menu-item {
+                width: calc(50% - 20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img id="logo" src="https://marketplace.canva.com/EAFpeiTrl4c/1/0/1600w/canva-abstract-chef-cooking-restaurant-free-logo-9Gfim1S8fHg.jpg" alt="Chef Logo">
+    </header>
+
+    <div id="menu-section">
+        <!-- Coq au Vin (France) -->
+        <div class="menu-category">
+            <div class="menu-item">
+                <img src="https://familystylefood.com/wp-content/uploads/2021/12/Coq-Au-Vin-hero-macro.jpg" alt="Coq au Vin">
+                <h2>Coq au Vin (France)</h2>
+                <p>Chicken slow-cooked in a rich Burgundy wine sauce with pearl onions, mushrooms, and bacon.</p>
+                <p>Price: $20</p>
+                <div class="comment-section">
+                    <p class="review" style="color:hotpink;"><b>"This dish is so good!" - John &#11088;&#11088;&#11088;&#11088;&#11088;</b></p>
+                    <button class="stars-btn" onclick="rateProduct(this, 5)">5<span class="star">&#11088;&#11088;&#11088;&#11088;&#11088;</span></button>
+                </div>
+            </div>
+
+            <!-- Samosas (India) -->
+            <div class="menu-item">
+                <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/26/95/8/C6mbbDDdRACyUFLZbI8I_samosas.jpg" alt="Samosas">
+                <h2>Samosas (India)</h2>
+                <p>Flaky pastry triangles filled with a savory potato and spice mixture, perfect for dipping in cilantro mint chutney.</p>
+                <p>Price: $10</p>
+                <div class="comment-section">
+                    <p class="review" style="color: #4caf50;"><b>"Delicious samosas!" - Alice &#11088;&#11088;&#11088;&#11088;&#11088;</b></p>
+                    <button class="stars-btn" onclick="rateProduct(this, 5)">5<span class="star">&#11088;&#11088;&#11088;&#11088;&#11088;</span></button>
+                </div>
+            </div>
+
+            <!-- Baklava (Middle East) -->
+            <div class="menu-item">
+                <img src="https://kalejunkie.com/wp-content/uploads/2023/02/KALEJUNKIE-HOMEMADE-BAKLAVA-1.jpg" alt="Baklava">
+                <h2>Baklava (Middle East)</h2>
+                <p>Layers of filo pastry drenched in honey and studded with chopped nuts, a symphony of textures and sweetness.</p>
+                <p>Price: $15</p>
+                <div class="comment-section">
+                    <p class="review" style="color: deepskyblue;"><b>"Amazing baklava!" - David &#11088;&#11088;&#11088;&#11088;&#11088;</b></p>
+                    <button class="stars-btn" onclick="rateProduct(this, 5)">5<span class="star">&#11088;&#11088;&#11088;&#11088;&#11088;</span></button>
+                </div>
+            </div>
+
+            <!-- Moroccan Mint Tea -->
+            <div class="menu-item">
+                <img src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/D2E2521B-2690-44B5-8BD5-0BAD5C76EB37/Derivates/290E3C0B-2A82-4243-8C73-BAA412C4CF80.jpg" alt="Moroccan Mint Tea">
+                <h2>Moroccan Mint Tea</h2>
+                <p>A refreshing blend of green tea, fresh mint leaves, and sugar, perfect to cleanse your palate and end your meal.</p>
+                <p>Price: $5</p>
+                <div class="comment-section">
+                    <p class="review" style="color: #e91e63;"><b>"Refreshing mint tea!" - Emily &#11088;&#11088;&#11088;&#11088;&#11088;</b></p>
+                    <button class="stars-btn" onclick="rateProduct(this, 5)">5<span class="star">&#11088;&#11088;&#11088;&#11088;&#11088;</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="back-btn-body" onclick="goBack()">Back</button>
+    <footer>
+        <p id="friday-night">FridayNight</p>
+        <p>"Good food is good mood. Indulge in the finest flavors crafted just for you."</p>
+        <p>Opening Hours: Mon-Sun, 11:00 AM - 10:00 PM</p>
+        <p>Enquiries: <a href="tel:+1234567890">+123 456 7890</a> | <a href="mailto:info@FridayNight">info@FridayNight.com</a></p>
+        <p>Address: 123 Main Street, Cityville</p>
+    </footer>
+
+    <script>
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+    </script>
+
+</body>
+
+</html>
